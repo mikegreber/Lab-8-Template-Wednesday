@@ -78,7 +78,12 @@ public class CityList {
         return cities.size();
     }
 
-    public boolean hasCityInProvince(String substring) {
+    public boolean hasCityInProvince(String province) {
+        for (City c : cities) {
+            if (c.getProvinceName().equals(province)) {
+                return true;
+            }
+        }
         return false;
     }
 }
